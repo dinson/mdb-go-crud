@@ -28,15 +28,15 @@ type Repository[T any] interface {
 	InsertMany(ctx context.Context, docs []*T) ([]*primitive.ObjectID, error)
 
 	// FindAll returns all the matching documents.
-	FindAll(ctx context.Context, filter *querybuilder.Query) ([]*T, error)
+	FindAll(ctx context.Context, query *querybuilder.Query) ([]*T, error)
 
 	// FindOne returns the first matching document.
-	FindOne(ctx context.Context, filter *querybuilder.Query) (*T, error)
+	FindOne(ctx context.Context, query *querybuilder.Query) (*T, error)
 
-	// DeleteOne deletes the first document that matches the filter.
+	// DeleteOne deletes the first document that matches the query.
 	DeleteOne(ctx context.Context, query *querybuilder.Query) error
 
-	// DeleteMany deletes all documents matching the filters.
+	// DeleteMany deletes all documents matching the query.
 	DeleteMany(ctx context.Context, query *querybuilder.Query) error
 }
 
