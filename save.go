@@ -1,11 +1,11 @@
-package mdbgocrud
+package mongokit
 
 import (
 	"context"
+	"github.com/dinson/mongokit/utils"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"mdb-go-crud/utils"
 )
 
 func (r repositoryImpl[T]) Save(ctx context.Context, entity *T, ID *string) (*primitive.ObjectID, error) {

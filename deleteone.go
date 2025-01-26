@@ -1,9 +1,9 @@
-package mdbgocrud
+package mongokit
 
 import (
 	"context"
+	"github.com/dinson/mongokit/querybuilder"
 	"go.mongodb.org/mongo-driver/bson"
-	"mdb-go-crud/querybuilder"
 )
 
 func (r repositoryImpl[T]) DeleteOne(ctx context.Context, query *querybuilder.Query) error {

@@ -1,10 +1,10 @@
-package mdbgocrud
+package mongokit
 
 import (
 	"context"
+	"github.com/dinson/mongokit/querybuilder"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
-	"mdb-go-crud/querybuilder"
 	"time"
 )
 

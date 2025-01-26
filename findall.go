@@ -1,11 +1,11 @@
-package mdbgocrud
+package mongokit
 
 import (
 	"context"
+	"github.com/dinson/mongokit/querybuilder"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"log"
-	"mdb-go-crud/querybuilder"
 )
 
 func (r repositoryImpl[T]) FindAll(ctx context.Context, filter *querybuilder.Query) ([]*T, error) {

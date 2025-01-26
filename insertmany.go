@@ -1,4 +1,4 @@
-package mdbgocrud
+package mongokit
 
 import (
 	"context"

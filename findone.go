@@ -1,12 +1,12 @@
-package mdbgocrud
+package mongokit
 
 import (
 	"context"
 	"errors"
+	"github.com/dinson/mongokit/querybuilder"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"mdb-go-crud/querybuilder"
 )
 
 func (r repositoryImpl[T]) FindOne(ctx context.Context, filter *querybuilder.Query) (*T, error) {
