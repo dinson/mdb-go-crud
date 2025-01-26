@@ -2,10 +2,10 @@ package querybuilder
 
 import (
 	"fmt"
+	"github.com/dinson/mongokit/utils"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"mongokit/utils"
 	"reflect"
 	"strings"
 )
